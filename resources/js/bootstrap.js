@@ -34,3 +34,6 @@ window.axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
 // });
 
 import "admin-lte";
+
+import Swal from "sweetalert2";
+window.Swal = Swal;

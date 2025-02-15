@@ -28,6 +28,43 @@
 
     <script src="{{ asset('js/jquery-3.7.1.slim.min.js') }}"></script>
     <script src="{{ asset('js/jquery.mask.min.js') }}"></script>
+
+    @if (session()->has('success'))
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                Swal.fire({
+                    title: 'Pronto!',
+                    text: "{{ session('success') }}",
+                    icon: 'success',
+                    timer: 2000,
+                    showConfirmButton: true,
+                    timerProgressBar: true,
+                });
+            })
+        </script>
+    @endif
+
+    @if ($errors->any())
+        @php
+            $mensagem = '';
+            foreach ($errors->all() as $error) {
+                $mensagem .= $error . '<br>';
+            }
+        @endphp
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                Swal.fire({
+                    title: 'Error!',
+                    html: "{!! $mensagem !!}",
+                    icon: 'error',
+                    timer: 5000,
+                    showConfirmButton: true,
+                    timerProgressBar: true,
+                });
+            })
+        </script>
+    @endif
+
     <script>
         (() => {
             "use strict";
@@ -109,6 +146,7 @@
             });
         })();
     </script>
+    @stack('scripts')
 </body>
 
 </html>
