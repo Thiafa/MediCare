@@ -1,17 +1,17 @@
-<div class="modal fade" id="deletePacienteModal-{{ $paciente->id }}" tabindex="-1"
-    aria-labelledby="deletePacienteModalLabel-{{ $paciente->id }}" aria-hidden="true">
+<div class="modal fade" id="deleteMedicoModal-{{ $medico->id }}" tabindex="-1"
+    aria-labelledby="deleteMedicoModalLabel-{{ $medico->id }}" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="deletePacienteModalLabel-{{ $paciente->id }}">
-                    {{ __('Paciente') }}</h1>
+                <h1 class="modal-title fs-5" id="deleteMedicoModalLabel-{{ $medico->id }}">
+                    {{ __('Medico') }}</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                {{ __('Deseja realmente apagar o registro do paciente') . " $paciente->name" }}?
+                {{ __('Deseja realmente apagar o registro do medico') . " $medico->name" }}?
             </div>
             <div class="modal-footer">
-                <form action="{{ route('pacientes.destroy', $paciente->id) }}" method="POST">
+                <form action="{{ route('medicos.destroy', $medico->id) }}" method="POST">
                     @method('DELETE')
                     @csrf
                     <button type="button" class="btn btn-secondary"
