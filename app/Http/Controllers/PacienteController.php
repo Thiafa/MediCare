@@ -36,7 +36,7 @@ class PacienteController extends Controller
     {
         $data = $request->validated();
         $this->pacienteService->create($data);
-        return redirect()->route('pacientes.index')->with('success', "Paciente criado com sucesso!");
+        return redirect()->route('pacientes.index')->with('success', "Registro criado com sucesso!");
     }
 
     /**
@@ -63,7 +63,7 @@ class PacienteController extends Controller
         $data = $request->validated();
         $data['data_nascimento'] = Carbon::createFromFormat('d-m-Y', $request->data_nascimento)->format('Y-m-d');
         $this->pacienteService->update($data, $id);
-        return redirect()->route('pacientes.index')->with('success', "Paciente atualizado com sucesso!");
+        return redirect()->route('pacientes.index')->with('success', "Registro atualizado com sucesso!");
     }
 
     /**
@@ -72,6 +72,6 @@ class PacienteController extends Controller
     public function destroy(string $id)
     {
         $this->pacienteService->delete($id);
-        return redirect()->route('pacientes.index')->with('success', "Paciente deletado com sucesso!");
+        return redirect()->route('pacientes.index')->with('success', "Registro deletado com sucesso!");
     }
 }

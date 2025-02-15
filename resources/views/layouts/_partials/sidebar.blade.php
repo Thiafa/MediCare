@@ -20,6 +20,15 @@
                             </p>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="{{ route('medicos.index') }}"
+                            class="nav-link @if (Route::is('medicos*')) active @endif">
+                            <i class="nav-icon fa-solid fa-user"></i>
+                            <p>
+                                {{ __('Médicos') }}
+                            </p>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
