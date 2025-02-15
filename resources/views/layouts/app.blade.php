@@ -38,7 +38,7 @@
                     icon: 'success',
                     timer: 2000,
                     showConfirmButton: true,
-                    timerProgressBar: true
+                    timerProgressBar: true,
                 });
             })
         </script>
@@ -59,7 +59,7 @@
                     icon: 'error',
                     timer: 5000,
                     showConfirmButton: true,
-                    timerProgressBar: true
+                    timerProgressBar: true,
                 });
             })
         </script>
