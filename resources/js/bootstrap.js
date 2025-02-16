@@ -37,3 +37,8 @@ import "admin-lte";
 
 import Swal from "sweetalert2";
 window.Swal = Swal;
+
+import Flatpickr from "flatpickr";
+window.Flatpickr;
+
+import "flatpickr/dist/flatpickr.min.css";
