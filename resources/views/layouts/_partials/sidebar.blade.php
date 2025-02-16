@@ -23,9 +23,18 @@
                     <li class="nav-item">
                         <a href="{{ route('medicos.index') }}"
                             class="nav-link @if (Route::is('medicos*')) active @endif">
-                            <i class="nav-icon fa-solid fa-user"></i>
+                            <i class="nav-icon fa-solid fa-user-doctor"></i>
                             <p>
                                 {{ __('Médicos') }}
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('atendimentos.index') }}"
+                            class="nav-link @if (Route::is('atendimentos*')) active @endif">
+                            <i class="nav-icon fa-solid fa-hospital-user"></i>
+                            <p>
+                                {{ __('Atendimentos') }}
                             </p>
                         </a>
                     </li>
