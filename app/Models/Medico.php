@@ -16,6 +16,11 @@ class Medico extends Model
         'especialidade'
     ];
 
+    public function atendimentos()
+    {
+        return $this->hasMany(Atendimento::class);
+    }
+
     public function scopeSearch(Builder $query, $request)
     {
         return $query->when($request->id, function (Builder $query, string $id) {

@@ -25,6 +25,11 @@ class Paciente extends Model
         ];
     }
 
+    public function atendimentos()
+    {
+        return $this->hasMany(Atendimento::class);
+    }
+
     public function getMaskedCpfAttribute($cpf)
     {
         return Str::of($cpf)->replaceMatches(
