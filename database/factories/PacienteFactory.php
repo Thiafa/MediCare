@@ -21,7 +21,7 @@ class PacienteFactory extends Factory
             'nome' => fake()->name(),
             'cpf' => $faker->cpf(false),
             'email' => fake()->unique()->safeEmail(),
-            'data_nascimento' => $this->faker->date('Y-m-d', '2007-01-01'),
+            'data_nascimento' => $this->faker->date('Y-m-d', '-18 years'),
         ];
     }
 }

@@ -18,8 +18,8 @@ class MedicoFactory extends Factory
     {
         return [
             'nome' => fake()->name(),
-            'crm' => fake()->word(),
-            'especialidade' => fake()->word()
+            'crm' => $this->faker->unique()->numerify('######'),
+            'especialidade' => $this->faker->randomElement(['Cardiologia', 'Dermatologia', 'Neurologia', 'Pediatria', 'Ortopedia']),
         ];
     }
 }
