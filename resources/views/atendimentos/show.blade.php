@@ -2,12 +2,12 @@
 
 @section('content')
     <div class="app-main">
-        <x-app-content-header title="{{ __('atendimento') }}" :breadcrumbs="[['label' => __('Listar'), 'url' => route('atendimentos.index')], ['label' => __('Atendimento')]]" />
+        <x-app-content-header title="{{ __('Atendimento') }}" :breadcrumbs="[['label' => __('Listar'), 'url' => route('atendimentos.index')], ['label' => __('Visualizar')]]" />
         <div class="app-content">
             <div class="container-fluid">
                 <div class="card">
                     <div class="card-header">
-                        {{ __('Show') }}
+                        {{ __('Visualizar') }}
                     </div>
                     <div class="card-body container-fluid">
                         <h5 class="mb-3">Dados de Atendimento</h5>

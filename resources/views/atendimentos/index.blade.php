@@ -2,7 +2,10 @@
 
 @section('content')
     <div class="app-main">
-        <x-app-content-header title="{{ __('Atendimentos') }}" :breadcrumbs="[['label' => __('listar'), 'url' => route('atendimentos.index')], ['label' => __('atendimentos')]]" />
+        <x-app-content-header title="{{ __('Atendimentos') }}" :breadcrumbs="[
+            ['label' => __('Atendimentos'), 'url' => route('atendimentos.index')],
+            ['label' => __('Atendimentos')],
+        ]" />
         <div class="app-content">
             <div class="container-fluid">
                 @include('atendimentos.components.search')

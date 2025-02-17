@@ -24,9 +24,9 @@ class UpdatePacienteRequest extends FormRequest
         $id = request()->route('paciente');
 
         return [
-            'name' => ['string', 'max:255'],
-            'cpf' => ['cpf', 'required', 'string', 'size:11', 'unique:pacientes,cpf,' . $id],
-            'email' => ['email', 'unique:users,email,' . $id],
+            'nome' => ['string', 'max:255'],
+            'cpf' => ['cpf', 'string', 'size:11', 'unique:pacientes,cpf,' . $id],
+            'email' => ['email', 'unique:pacientes,email,' . $id],
             'data_nascimento' => ['date', 'date_format:d-m-Y', 'before:today', 'after:1930-01-01']
         ];
     }
@@ -34,7 +34,8 @@ class UpdatePacienteRequest extends FormRequest
     public function messages()
     {
         return [
-            'data_nascimento.after' => 'A data de nascimento deve ser posterior a 01-01-1930.'
+            'data_nascimento.after' => 'A data de nascimento deve ser posterior a 01-01-1930.',
+            'data_nascimento.before' => 'A data deve ser anterior a de hoje.',
         ];
     }
 }

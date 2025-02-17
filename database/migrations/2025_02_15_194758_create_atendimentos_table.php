@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('atendimentos', function (Blueprint $table) {
             $table->id();
             $table->date('data_atendimento');
-            $table->foreignId('medico_id')->constrained('medicos');
-            $table->foreignId('paciente_id')->constrained('pacientes');
+            $table->foreignId('medico_id')->constrained('medicos')->onDelete('cascade');
+            $table->foreignId('paciente_id')->constrained('pacientes')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -26,7 +26,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('atendimentos', function (Blueprint $table) {
-            $table->dropForeign('paciente_id');
+            $table->dropForeign('paciente_id')->ond;
             $table->dropForeign('medico_id');
         });
         Schema::dropIfExists('atendimentos');

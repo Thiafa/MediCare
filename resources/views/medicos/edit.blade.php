@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="app-main">
-        <x-app-content-header title="{{ __('Médico') }}" :breadcrumbs="[['label' => __('Medico'), 'url' => route('medicos.index')], ['label' => __('Medico')]]" />
+        <x-app-content-header title="{{ __('Médicos') }}" :breadcrumbs="[['label' => __('Listar'), 'url' => route('medicos.index')], ['label' => __('Editar')]]" />
         <div class="app-content">
             <div class="container-fluid">
                 <div class="card">
@@ -22,7 +22,6 @@
                             </div>
                         </div>
                     </form>
-                    <br />
                 </div>
             </div>
         </div>

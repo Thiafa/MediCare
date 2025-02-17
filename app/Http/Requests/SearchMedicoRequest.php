@@ -22,7 +22,10 @@ class SearchMedicoRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'id' => ['nullable', 'integer'],
+            'nome' => ['nullable', 'string', 'max:255'],
+            'crm' => ['nullable', 'string', 'max:20'],
+            'especialidade' => ['nullable', 'string', 'max:40'],
         ];
     }
 }

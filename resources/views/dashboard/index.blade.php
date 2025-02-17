@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="app-main">
-        <x-app-content-header title="{{ __('Relatórios') }}" :breadcrumbs="[['label' => __('listar'), 'url' => route('dashboard')], ['label' => __('Relatórios')]]" />
+        <x-app-content-header title="{{ __('Relatórios') }}" :breadcrumbs="[['label' => __('Relatórios'), 'url' => route('dashboard')], ['label' => __('Relatórios')]]" />
         <div class="app-content">
             <div class="container-fluid">
                 @livewire('dashboard')

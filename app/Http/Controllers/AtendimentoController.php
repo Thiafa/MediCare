@@ -70,8 +70,7 @@ class AtendimentoController extends Controller
     public function update(UpdateAtendimentoRequest $request, string $id)
     {
         $atendimento = Atendimento::find($id);
-        $atendimento->fill($request->validated());
-        $atendimento->save();
+        $atendimento->update($request->all());
         return redirect()->route('atendimentos.index')->with('success', 'Registro atualizado com sucesso!');
     }
 
