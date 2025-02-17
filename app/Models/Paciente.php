@@ -47,6 +47,7 @@ class Paciente extends Model
                 return $query->where('nome', 'like', '%' . $nome . '%');
             })
             ->when($request->cpf, function (Builder $query, string $cpf) {
+                $cpf = Str::of($cpf)->replaceMatches('/\D/', '');
                 return $query->where('cpf', 'like', '%' . $cpf . '%');
             });
     }

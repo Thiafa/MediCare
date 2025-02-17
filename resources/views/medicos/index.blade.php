@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="app-main">
-        <x-app-content-header title="{{ __('Médicos') }}" :breadcrumbs="[['label' => __('listar'), 'url' => route('medicos.index')], ['label' => __('medicos')]]" />
+        <x-app-content-header title="{{ __('Médicos') }}" :breadcrumbs="[['label' => __('Médicos'), 'url' => route('medicos.index')], ['label' => __('Médicos')]]" />
         <div class="app-content">
             <div class="container-fluid">
                 @include('medicos.components.search')
@@ -42,7 +42,7 @@
                                     @include('medicos.components.modal')
                                 @empty
                                     <tr class="text-center">
-                                        <td colspan="4">
+                                        <td colspan="6">
                                             {{ __('Nenhum registro encontrado') }}
                                         </td>
                                     </tr>

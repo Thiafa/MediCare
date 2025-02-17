@@ -2,12 +2,12 @@
 
 @section('content')
     <div class="app-main">
-        <x-app-content-header title="{{ __('Paciente') }}" :breadcrumbs="[['label' => __('Paciente'), 'url' => route('pacientes.index')], ['label' => __('Paciente')]]" />
+        <x-app-content-header title="{{ __('Médicos') }}" :breadcrumbs="[['label' => __('Listar'), 'url' => route('medicos.index')], ['label' => __('Visualizar')]]" />
         <div class="app-content">
             <div class="container-fluid">
                 <div class="card">
                     <div class="card-header">
-                        {{ __('Show') }}
+                        {{ __('Visualizar') }}
                     </div>
                     <div class="card-body container-fluid">
                         <h5 class="mb-3">Dados Pessoais</h5>
@@ -49,7 +49,7 @@
                     </div>
                     <div class="card-footer">
                         <div class="d-flex justify-content-between">
-                            <a href="{{ route('pacientes.index') }}" class="btn btn-secondary"
+                            <a href="{{ route('medicos.index') }}" class="btn btn-secondary"
                                 title="Voltar">{{ __('Voltar') }}</a>
                         </div>
                     </div>

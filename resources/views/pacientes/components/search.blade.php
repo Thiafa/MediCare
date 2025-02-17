@@ -14,11 +14,11 @@
                         </span>
                     @enderror
                 </div>
-                <div class="col-md-5">
-                    <label for="name" class="form-label">{{ __('Name') }}</label>
-                    <input type="search" class="form-control @error('name') is-invalid @enderror"
-                        value="{{ old('name', request()->name) ?? '' }}" name="name" id="name">
-                    @error('name')
+                <div class="col-md-7">
+                    <label for="nome" class="form-label">{{ __('Name') }}</label>
+                    <input type="search" class="form-control @error('nome') is-invalid @enderror"
+                        value="{{ old('nome', request()->nome) ?? '' }}" name="nome" id="nome">
+                    @error('nome')
                         <span class="invalid-feedback">
                             {{ $message }}
                         </span>
@@ -29,21 +29,6 @@
                     <input type="search" class="form-control @error('cpf') is-invalid @enderror"
                         value="{{ old('cpf', request()->cpf) ?? '' }}" name="cpf" id="cpf">
                     @error('cpf')
-                        <span class="invalid-feedback">
-                            {{ $message }}
-                        </span>
-                    @enderror
-                </div>
-                <div class="col-md-2">
-                    <label for="status" class="form-label">{{ __('Status') }}</label>
-                    <select class="form-select" name="status" id="status">
-                        <option value=""></option>
-                        <option value="ativo" {{ old('status', request()->status) == 'ativo' ? 'selected' : '' }}>
-                            {{ __('Ativo') }}</option>
-                        <option value="inativo" {{ old('status', request()->status) == 'inatvo' ? 'selected' : '' }}>
-                            {{ __('Arquivado') }}</option>
-                    </select>
-                    @error('status')
                         <span class="invalid-feedback">
                             {{ $message }}
                         </span>

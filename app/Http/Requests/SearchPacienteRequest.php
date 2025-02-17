@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Str;
 
 class SearchPacienteRequest extends FormRequest
 {
@@ -22,7 +23,9 @@ class SearchPacienteRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'id' => ['nullable', 'integer'],
+            'nome' => ['nullable', 'string', 'max:255'],
+            'cpf' => ['nullable', 'string', 'max:14'],
         ];
     }
 }

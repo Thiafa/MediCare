@@ -2,12 +2,12 @@
 
 @section('content')
     <div class="app-main">
-        <x-app-content-header title="{{ __('Client') }}" :breadcrumbs="[['label' => __('Paciente'), 'url' => route('pacientes.index')], ['label' => __('Paciente')]]" />
+        <x-app-content-header title="{{ __('Paciente') }}" :breadcrumbs="[['label' => __('Listar'), 'url' => route('pacientes.index')], ['label' => __('Editar')]]" />
         <div class="app-content">
             <div class="container-fluid">
                 <div class="card">
                     <div class="card-header">
-                        {{ __('Edit') }}
+                        {{ __('Editar') }}
                     </div>
                     <form action="{{ route('pacientes.update', $paciente->id) }}" class="needs-validation" method="POST"
                         enctype="multipart/form-data" id="form-edit-pacientes">
