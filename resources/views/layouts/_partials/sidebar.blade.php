@@ -1,5 +1,5 @@
 <aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
-    <div class="sidebar-brand"> <a class="brand-link" href="/dist/pages/">
+    <div class="sidebar-brand"> <a class="brand-link" href="{{ route('dashboard') }}">
             <span class="brand-text fw-light">{{ env('APP_NAME', 'MediCare') }}</span>
         </a>
     </div>
@@ -11,6 +11,15 @@
             <nav class="mt-2">
                 <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu"
                     data-accordion="false">
+                    <li class="nav-item">
+                        <a href="{{ route('dashboard') }}"
+                            class="nav-link @if (Route::is('dashboard*')) active @endif">
+                            <i class="nav-icon fa-solid fa-user-doctor"></i>
+                            <p>
+                                {{ __('Relatórios') }}
+                            </p>
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <a href="{{ route('pacientes.index') }}"
                             class="nav-link @if (Route::is('pacientes*')) active @endif">
