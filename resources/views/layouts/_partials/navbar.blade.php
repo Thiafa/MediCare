@@ -7,18 +7,15 @@
         <ul class="navbar-nav ms-auto">
             <li class="nav-item dropdown user-menu"> <a href="#" class="nav-link dropdown-toggle"
                     data-bs-toggle="dropdown">
-                    <span class="d-none d-md-inline">User</span> </a>
+                    <span class="d-none d-md-inline">{{ Auth::user()->name }}</span> </a>
                 <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
                     <li class="user-footer">
                         <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a href="#" class="btn btn-default btn-flat">{{ __('Profile') }}</a>
-                            </li>
                             <li>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                   document.getElementById('logout-form').submit();">
-                                    <i class="mr-2"></i>{{ __('Sign Out') }}
+                                    <i class="mr-2"></i>{{ __('Sair') }}
                                 </a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
@@ -28,7 +25,6 @@
                     </li>
                 </ul>
             </li>
-            {{-- Theme --}}
             <li class="nav-item dropdown"> <button
                     class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center"
                     id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown"
